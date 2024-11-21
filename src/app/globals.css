@@ -8,11 +8,13 @@
   --accent: #6a3aa2;
   --text-primary: #201f1f;
   --text-secondary: #fbfbff;
+  --button-border: #e0e0e0;
+  --blockquote: #333333;
   --background: #ffffff;
   --background-dark: 'linear-gradient(165.54deg, #141333 -33.39%, #202261 15.89%, #543C97 55.84%, #6939A2 74.96%)';
   --foreground: #201f1f;
   --custom-gradient: 'linear-gradient(165.54deg, #141333 -33.39%, #202261 15.89%, #543C97 55.84%, #6939A2 74.96%)';
-  --default-shadow: 'box-shadow: 2px 2px 6px 0px #543C9740';
+  --default-shadow: '2px 2px 6px 0px rgba(84, 60, 151, 0.251)';
 }
 
 body {

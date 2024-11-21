@@ -1,26 +1,22 @@
 'use client';
 
-import clsx from 'clsx';
 import { useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 
 interface Props extends PropsWithChildren {
   pageName: string;
-  isActive?: boolean;
 }
 
-export default function Button({ pageName, isActive, children }: Props) {
+export default function Button({ pageName, children }: Props) {
   const router = useRouter();
 
-  const handleClick = () => router.push(`/quize/${pageName}`);
+  const handleClick = () => router.push(`/quiz/${pageName}`);
 
   return (
     <button
-      className={clsx(
-        isActive ? 'bg-button-gradient text-buttonText' : 'text-textPrimary',
-        'bg-buttonDefault font-medium text-button-text p-4 rounded-lg shadow-button',
-        'hover:bg-gradient-to-r hover:from-primary hover:to-accent transition-all',
-      )}
+      className={
+        'w-[100%] border-1 border-buttonBorder bg-buttonDefault font-normal text-button-text text-textPrimary px-5 py-3 rounded-2xl shadow-shadowDefault active:bg-gradient-to-r active:from-primary active:to-accent active:text-white'
+      }
       onClick={handleClick}
     >
       {children}

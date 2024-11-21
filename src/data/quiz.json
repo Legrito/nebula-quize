@@ -1,0 +1,206 @@
+{
+  "screens": [
+    {
+      "slug": "gender",
+      "title": "Select your gender:",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Female", "nextSlug": "status" },
+        { "value": "Male", "nextSlug": "status" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "status",
+      "title": "So we can get to know you better, tell us about your relationship status.",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Single", "nextSlug": "parent-single" },
+        { "value": "In a relationship", "nextSlug": "parent" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "parent",
+      "title": "Are you a parent?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Yes", "nextSlug": "relationship-approach" },
+        { "value": "No", "nextSlug": "relationship-approach" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "relationship-approach",
+      "title": "{Gender} {who have children (if have children)} need a slightly different approach to improve their relationship. Which statement best describes you?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        {
+          "value": "I’m very unhappy with how things are going in my relationship",
+          "nextSlug": "partner-characteristic"
+        },
+        {
+          "value": "I’m unhappy with parts of my relationship, but some things are working well",
+          "nextSlug": "partner-characteristic"
+        },
+        {
+          "value": "I’m generally happy in my relationship",
+          "nextSlug": "partner-characteristic"
+        }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "partner-characteristic",
+      "title": "Is your partner an introvert or extrovert?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Introvert", "nextSlug": "partner-gender" },
+        { "value": "Extrovert", "nextSlug": "partner-gender" },
+        { "value": "A bit of both", "nextSlug": "partner-gender" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "partner-gender",
+      "title": "What is your partner’s gender?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Male", "nextSlug": "partner-priority" },
+        { "value": "Female", "nextSlug": "partner-priority" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "partner-priority",
+      "title": "Do you agree with the statement below?",
+      "description": "",
+      "quotes": "My partner and I make sex a priority in our relationship",
+      "options": [
+        { "value": "Strongly agree", "nextSlug": "relationship-goal" },
+        { "value": "Agree", "nextSlug": "relationship-goal" },
+        { "value": "Neutral", "nextSlug": "relationship-goal" },
+        { "value": "Disagree", "nextSlug": "relationship-goal" },
+        { "value": "Strongly disagree", "nextSlug": "relationship-goal" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "relationship-goal",
+      "title": "When you think about your relationship goals, you feel...?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        {
+          "value": "Optimistic! They are totally doable, with some guidance.",
+          "nextSlug": "about-us"
+        },
+        {
+          "value": "Cautious. I’ve struggled before, but I’m hopeful.",
+          "nextSlug": "about-us"
+        },
+        { "value": "I’m feeling a little anxious, honestly.", "nextSlug": "about-us" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "parent-single",
+      "title": "Are you a single parent?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Yes", "nextSlug": "single-problem" },
+        { "value": "No", "nextSlug": "single-problem" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "single-problem",
+      "title": "Single {gender} {who have children (if have children)} need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        {
+          "value": "I was unhappy with how things were going in my relationship",
+          "nextSlug": "trait-tent-to-overthink"
+        },
+        {
+          "value": "I was unhappy with parts of my relationship, but some things were working",
+          "nextSlug": "trait-tent-to-overthink"
+        },
+        {
+          "value": "I was generally happy with my relationship",
+          "nextSlug": "trait-tent-to-overthink"
+        },
+        {
+          "value": "I’ve never been in a relationship",
+          "nextSlug": "trait-tent-to-overthink"
+        }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "trait-tent-to-overthink",
+      "title": "Do you tend to overthink?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Yes", "nextSlug": "how-does-it-work" },
+        { "value": "No", "nextSlug": "how-does-it-work" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "how-does-it-work",
+      "title": "So how does it work?",
+      "description": "We analyze hundreds of data points to create your unique astrological blueprint. This is combined with AI to tailor-make your astrological insights, based on your answers. We’re going to change your relationship with astrology.",
+      "quotes": "",
+      "options": [],
+      "type": "info"
+    },
+    {
+      "slug": "traits-most-important",
+      "title": "What is most important to you?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Success", "nextSlug": "about-us" },
+        { "value": "Romance", "nextSlug": "about-us" },
+        { "value": "Stability", "nextSlug": "about-us" },
+        { "value": "Freedom", "nextSlug": "about-us" }
+      ],
+      "type": "quiz"
+    },
+    {
+      "slug": "about-us",
+      "title": "Where did you hear about us?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Poster or Billboard", "nextSlug": "final" },
+        { "value": "Friend or Family", "nextSlug": "final" },
+        { "value": "Instagram", "nextSlug": "final" },
+        { "value": "Direct Mail or Package Insert", "nextSlug": "final" },
+        { "value": "Online TV or Streaming TV", "nextSlug": "final" },
+        { "value": "TV", "nextSlug": "final" },
+        { "value": "Radio", "nextSlug": "final" },
+        { "value": "Search Engine (Google, Bing, etc.)", "nextSlug": "final" },
+        { "value": "Newspaper or Magazine", "nextSlug": "final" },
+        { "value": "Facebook", "nextSlug": "final" },
+        { "value": "Blog Post or Website Review", "nextSlug": "final" },
+        { "value": "Podcast", "nextSlug": "final" },
+        { "value": "Influencer", "nextSlug": "final" },
+        { "value": "YouTube", "nextSlug": "final" },
+        { "value": "Pinterest", "nextSlug": "final" },
+        { "value": "Other", "nextSlug": "final" }
+      ],
+      "type": "quiz"
+    }
+  ]
+}

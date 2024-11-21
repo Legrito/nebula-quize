@@ -13,9 +13,10 @@ const config: Config = {
         secondary: 'var(--secondary)',
         accent: 'var(--accent)',
         buttonDefault: 'var(--secondary)',
-        buttonText: 'var(--button-text)',
+        buttonBorder: 'var(--button-border)',
         textPrimary: 'var(--text-primary)',
         textSecondary: 'var(--text-secondary)',
+        blockquote: 'var(--blockquote)',
         backgroundLight: 'var(--background)',
         backgroundDark: 'var(--background-dark)',
         foreground: 'var(--foreground)',
@@ -25,7 +26,7 @@ const config: Config = {
         'background-gradient': 'var(--background-dark)',
       },
       boxShadow: {
-        button: 'var(--defaultShadow)',
+        shadowDefault: '2px 2px 6px 0px rgba(84, 60, 151, 0.251)',
       },
       fontSize: {
         'button-text': ['16px', { lineHeight: '24px' }],

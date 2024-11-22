@@ -3,6 +3,7 @@ import { Open_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Main from '@/components/Main';
+import StoreProvider from '@/store/StoreProvider';
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -24,8 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${openSans.className} antialiased`}>
-        <Header />
-        <Main>{children}</Main>
+        <StoreProvider>
+          <Header />
+          <Main>{children}</Main>
+        </StoreProvider>
       </body>
     </html>
   );

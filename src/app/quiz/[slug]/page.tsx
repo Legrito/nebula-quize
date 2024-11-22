@@ -1,4 +1,4 @@
-import Button from '@/components/Button';
+import AnswerItem from '@/components/AnswerItem';
 
 import quizConfig from '../../../data/quiz.json';
 import Title from '@/components/Title';
@@ -16,7 +16,7 @@ export default function Page({
   params,
 }: {
   params: {
-    slug: string; // slug of the page
+    slug: string;
   };
 }) {
   const screen = quizConfig.screens.find((s) => s.slug === params.slug);
@@ -41,7 +41,13 @@ export default function Page({
         <ul className="flex flex-col justify-center align-middle gap-[20px]">
           {screen.options.map((option) => (
             <li key={option.value} className="w-[100%]">
-              <Button pageName={option.nextSlug}>{option.value}</Button>
+              <AnswerItem
+                pageName={params.slug}
+                answer={option.value}
+                nextPage={option.nextSlug}
+              >
+                {option.value}
+              </AnswerItem>
             </li>
           ))}
         </ul>

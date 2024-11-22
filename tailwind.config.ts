@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      darkMode: 'class',
       colors: {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',

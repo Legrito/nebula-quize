@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.className} antialiased`}>
+      <body className={`${openSans.className} antialiased min-h-[100dvh]`}>
         <StoreProvider>
           <Header />
           <Main>{children}</Main>

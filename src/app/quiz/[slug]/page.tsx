@@ -1,10 +1,8 @@
-import AnswerItem from '@/components/AnswerItem';
-
 import quizConfig from '../../../data/quiz.json';
-import Title from '@/components/Title';
-import Text from '@/components/Text';
-import QuoteBox from '@/components/QuoteBox';
 import clsx from 'clsx';
+import ThemeContainer from '@/components/ThemeContainer';
+import ContentBox from '@/components/ContentBox';
+import { Screen } from '@/types';
 
 export async function generateStaticParams() {
   return quizConfig.screens.map((screen) => ({
@@ -19,39 +17,22 @@ export default function Page({
     slug: string;
   };
 }) {
-  const screen = quizConfig.screens.find((s) => s.slug === params.slug);
+  const screen = quizConfig.screens.find((s) => s.slug === params.slug) as Screen;
 
   if (!screen) {
     return <p>Page not found</p>;
   }
 
   return (
-    <article className="flex flex-col gap-[30px] w-[100%] lg:w-[330px] px-[20px] lg:px-0">
-      <div
-        className={clsx(
-          !!screen.quotes ? 'text-center' : 'text-left',
-          'flex flex-col gap-[20px]',
-        )}
-      >
-        <Title text={screen.title} />
-        {!!screen.description && <Text text={screen.description} />}
-        {!!screen.quotes && <QuoteBox text={screen.quotes} />}
-      </div>
-      {screen.options.length > 0 && (
-        <ul className="flex flex-col justify-center align-middle gap-[20px]">
-          {screen.options.map((option) => (
-            <li key={option.value} className="w-[100%]">
-              <AnswerItem
-                pageName={params.slug}
-                answer={option.value}
-                nextPage={option.nextSlug}
-              >
-                {option.value}
-              </AnswerItem>
-            </li>
-          ))}
-        </ul>
+    <article
+      className={clsx(
+        screen.type.name === 'info' ? 'gap-[40px]' : 'gap-[30px]',
+        'flex flex-col w-[100%] lg:w-[330px] px-[20px] lg:px-0',
       )}
+    >
+      <ThemeContainer theme={screen.type.theme}>
+        <ContentBox screen={screen} slug={params.slug} />
+      </ThemeContainer>
     </article>
   );
 }

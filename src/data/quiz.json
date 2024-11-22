@@ -9,7 +9,7 @@
         { "value": "Female", "nextSlug": "status" },
         { "value": "Male", "nextSlug": "status" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "status",
@@ -20,7 +20,7 @@
         { "value": "Single", "nextSlug": "parent-single" },
         { "value": "In a relationship", "nextSlug": "parent" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "parent",
@@ -31,7 +31,7 @@
         { "value": "Yes", "nextSlug": "relationship-approach" },
         { "value": "No", "nextSlug": "relationship-approach" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "relationship-approach",
@@ -52,7 +52,7 @@
           "nextSlug": "partner-characteristic"
         }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "partner-characteristic",
@@ -64,7 +64,7 @@
         { "value": "Extrovert", "nextSlug": "partner-gender" },
         { "value": "A bit of both", "nextSlug": "partner-gender" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "partner-gender",
@@ -75,7 +75,7 @@
         { "value": "Male", "nextSlug": "partner-priority" },
         { "value": "Female", "nextSlug": "partner-priority" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "partner-priority",
@@ -89,7 +89,7 @@
         { "value": "Disagree", "nextSlug": "relationship-goal" },
         { "value": "Strongly disagree", "nextSlug": "relationship-goal" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "relationship-goal",
@@ -107,7 +107,7 @@
         },
         { "value": "I’m feeling a little anxious, honestly.", "nextSlug": "about-us" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "parent-single",
@@ -118,7 +118,7 @@
         { "value": "Yes", "nextSlug": "single-problem" },
         { "value": "No", "nextSlug": "single-problem" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "single-problem",
@@ -143,7 +143,7 @@
           "nextSlug": "trait-tent-to-overthink"
         }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "trait-tent-to-overthink",
@@ -154,7 +154,7 @@
         { "value": "Yes", "nextSlug": "how-does-it-work" },
         { "value": "No", "nextSlug": "how-does-it-work" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "how-does-it-work",
@@ -162,7 +162,7 @@
       "description": "We analyze hundreds of data points to create your unique astrological blueprint. This is combined with AI to tailor-make your astrological insights, based on your answers. We’re going to change your relationship with astrology.",
       "quotes": "",
       "options": [],
-      "type": "info"
+      "type": { "name": "info", "theme": "dark" }
     },
     {
       "slug": "traits-most-important",
@@ -175,7 +175,7 @@
         { "value": "Stability", "nextSlug": "about-us" },
         { "value": "Freedom", "nextSlug": "about-us" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     },
     {
       "slug": "about-us",
@@ -200,7 +200,7 @@
         { "value": "Pinterest", "nextSlug": "final" },
         { "value": "Other", "nextSlug": "final" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" }
     }
   ]
 }

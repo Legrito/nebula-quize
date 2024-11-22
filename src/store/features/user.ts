@@ -1,6 +1,6 @@
+import { ScreenTypeTheme } from '@/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-// Define a type for the slice state
 export interface QuizI {
   slug: string;
   answer: string;
@@ -8,9 +8,10 @@ export interface QuizI {
 
 export interface UserState {
   quiz: QuizI[];
+  theme: ScreenTypeTheme;
 }
 
-const initialState: UserState = { quiz: [] };
+const initialState: UserState = { quiz: [], theme: 'light' };
 
 // SAMPLE TO FETCH EXISTING USER --->
 // export const getUser = createAsyncThunk<UserState, void>(
@@ -51,6 +52,9 @@ export const userSlice = createSlice({
         state.quiz.push(action.payload);
       }
     },
+    setTheme: (state, action: PayloadAction<ScreenTypeTheme>) => {
+      state.theme = action.payload;
+    },
   },
   //SAMPLE OF THE STORE REHIDRATION USING DATA FROM BACKEND--->
   // extraReducers: (builder) => {
@@ -70,6 +74,8 @@ export const selectAllQuizAnswers = (state: { quiz: QuizI[] }) => state.quiz;
 export const selectAnswerBySlug = (slug: string) => (state: { quiz: QuizI[] }) =>
   state.quiz.find((quiz) => quiz.slug === slug)?.answer;
 
-export const { addAnswer } = userSlice.actions;
+export const selectTheme = (state: { user: UserState }) => state.user.theme;
+
+export const { addAnswer, setTheme } = userSlice.actions;
 
 export default userSlice.reducer;

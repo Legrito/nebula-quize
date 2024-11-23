@@ -6,8 +6,6 @@ import { useAppSelector } from '@/store/hooks';
 export default function NebulaLogo() {
   const theme = useAppSelector(selectTheme);
 
-  console.log(theme);
-
   return theme === 'dark' ? (
     <svg
       width="24"

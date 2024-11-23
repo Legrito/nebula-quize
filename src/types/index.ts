@@ -18,4 +18,5 @@ export interface Screen {
   quotes: string;
   options: Option[];
   type: ScreenType;
+  nextPage: string;
 }

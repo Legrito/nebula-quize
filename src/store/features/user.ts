@@ -1,5 +1,5 @@
 import { ScreenTypeTheme } from '@/types';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface QuizI {
   slug: string;
@@ -9,9 +9,10 @@ export interface QuizI {
 export interface UserState {
   quiz: QuizI[];
   theme: ScreenTypeTheme;
+  nextSlug: string;
 }
 
-const initialState: UserState = { quiz: [], theme: 'light' };
+const initialState: UserState = { quiz: [], theme: 'light', nextSlug: '' };
 
 // SAMPLE TO FETCH EXISTING USER --->
 // export const getUser = createAsyncThunk<UserState, void>(
@@ -55,6 +56,9 @@ export const userSlice = createSlice({
     setTheme: (state, action: PayloadAction<ScreenTypeTheme>) => {
       state.theme = action.payload;
     },
+    setNextSlug: (state, action: PayloadAction<string>) => {
+      state.nextSlug = action.payload;
+    },
   },
   //SAMPLE OF THE STORE REHIDRATION USING DATA FROM BACKEND--->
   // extraReducers: (builder) => {
@@ -69,13 +73,16 @@ export const userSlice = createSlice({
   //<---
 });
 
-export const selectAllQuizAnswers = (state: { quiz: QuizI[] }) => state.quiz;
-
-export const selectAnswerBySlug = (slug: string) => (state: { quiz: QuizI[] }) =>
-  state.quiz.find((quiz) => quiz.slug === slug)?.answer;
-
 export const selectTheme = (state: { user: UserState }) => state.user.theme;
 
-export const { addAnswer, setTheme } = userSlice.actions;
+export const selectNextSlug = (state: { user: UserState }) => state.user.nextSlug;
+
+export const selectAnswerBySlug = (slug: string) =>
+  createSelector(
+    [(state: { user: UserState }) => state.user.quiz],
+    (quiz) => quiz.find((q) => q.slug === slug)?.answer,
+  );
+
+export const { addAnswer, setTheme, setNextSlug } = userSlice.actions;
 
 export default userSlice.reducer;

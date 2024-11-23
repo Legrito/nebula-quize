@@ -1,9 +1,9 @@
 import Quote from '../Quote';
 import Text from '../Text';
-import Title from '../Title';
 import { Screen } from '@/types';
 import clsx from 'clsx';
 import AnswerItem from '../AnswerItem';
+import DynamicTitle from './DynamicTitle';
 
 interface Props {
   screen: Screen;
@@ -19,7 +19,7 @@ export default function ContentBox({ screen, slug }: Props) {
           'flex flex-col gap-[20px]',
         )}
       >
-        <Title text={screen.title} />
+        <DynamicTitle text={screen.title} />
         {!!screen.description && <Text text={screen.description} />}
         {!!screen.quotes && <Quote text={screen.quotes} />}
       </div>
@@ -28,9 +28,11 @@ export default function ContentBox({ screen, slug }: Props) {
           {screen.options.map((option) => (
             <li key={option.value} className="w-[100%]">
               <AnswerItem
+                pageType={screen.type.name}
                 pageName={slug}
                 answer={option.value}
                 nextPage={option.nextSlug}
+                nextInfoPage={screen.nextPage}
               >
                 {option.value}
               </AnswerItem>

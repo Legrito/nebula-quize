@@ -8,6 +8,7 @@
   --accent: #6a3aa2;
   --text-primary: #201f1f;
   --text-secondary: #201f1f;
+  --button-text: #201f1f;
   --button-border: #e0e0e0;
   --blockquote: #333333;
   --background: #ffffff;
@@ -22,6 +23,7 @@
   --accent: #6a3aa2;
   --text-primary: #ffffff;
   --text-secondary: #fbfbff;
+  --button-text: #6a3aa2;
   --button-border: #e0e0e0;
   --blockquote: #ffffff;
   --background: linear-gradient(

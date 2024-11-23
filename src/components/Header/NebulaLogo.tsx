@@ -1,9 +1,10 @@
 'use client';
 
+import { selectTheme } from '@/store/features/user';
 import { useAppSelector } from '@/store/hooks';
 
 export default function NebulaLogo() {
-  const theme = useAppSelector((state) => state.user.theme);
+  const theme = useAppSelector(selectTheme);
 
   console.log(theme);
 

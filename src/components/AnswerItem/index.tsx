@@ -26,9 +26,8 @@ export default function AnswerItem({
   const nextPagePersisted = useAppSelector(selectNextSlug);
 
   const handleAddAnswer = () => {
-    dispatch(addAnswer({ slug: pageName, answer }));
-    console.log(pageType);
     if (pageType === 'quiz') {
+      dispatch(addAnswer({ slug: pageName, answer }));
       dispatch(setNextSlug(nextPage));
     }
   };

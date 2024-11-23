@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nebula Quiz
 
-## Getting Started
+Nebula Quiz is a web application built with Next.js, React, and Redux Toolkit. It serves as an interactive quiz platform, providing users with an engaging way to test their knowledge.
 
-First, run the development server:
+## Table of Contents
+
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Scripts](#scripts)
+- [Usage](#usage)
+- [Linting and Formatting](#linting-and-formatting)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- Interactive quiz interface
+- State management using Redux Toolkit
+- Responsive design with Tailwind CSS
+- Linting and formatting for code quality
+
+## Technologies
+
+- **Next.js**: A React framework for server-rendered applications.
+- **React**: A JavaScript library for building user interfaces.
+- **Redux Toolkit**: A powerful toolset for efficient Redux development.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **TypeScript**: A superset of JavaScript that adds static types.
+
+## Installation
+
+To get started with the Nebula Quiz project, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/nebula-quize.git
+   cd nebula-quize
+   ```
+
+2. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Set up pre-commit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm husky init
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+pnpm run prepare
 
-## Learn More
+pnpm husky add .husky/pre-commit "npm run format:fix && npm run lint"
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The following scripts are available to manage the application:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run the app in development mode:
 
-## Deploy on Vercel
+```bash
+pnpm dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run the app in production mode:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm prod
+```
+
+## Usage
+
+After starting the application, navigate to [http://localhost:3000] in your web browser to access the Nebula Quiz platform.

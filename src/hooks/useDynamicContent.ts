@@ -1,20 +1,20 @@
 import { selectAnswerBySlug } from '@/store/features/user';
 import { useAppSelector } from '@/store/hooks';
+import capitalize from 'lodash.capitalize';
 
 export const useDynamicContent = (template: string): string => {
   const gender = useAppSelector(selectAnswerBySlug('gender'));
   const hasChildren = useAppSelector(selectAnswerBySlug('parent'));
 
-  console.log(gender, hasChildren);
-
   const genderText = !gender
-    ? 'Everyone'
+    ? 'everyone'
     : gender.toLowerCase() === 'male'
-      ? 'Man'
-      : 'Woman';
+      ? 'man'
+      : 'woman';
   const parentText = hasChildren?.toLowerCase() === 'yes' ? 'who have children' : '';
 
   return template
-    .replace('{Gender}', genderText)
+    .replace('{gender}', genderText)
+    .replace('{Gender}', capitalize(genderText))
     .replace('{who have children (if have children)}', parentText);
 };

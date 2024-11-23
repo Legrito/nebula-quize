@@ -9,7 +9,8 @@
         { "value": "Female", "nextSlug": "status" },
         { "value": "Male", "nextSlug": "status" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "status",
@@ -20,7 +21,8 @@
         { "value": "Single", "nextSlug": "parent-single" },
         { "value": "In a relationship", "nextSlug": "parent" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "parent",
@@ -31,7 +33,8 @@
         { "value": "Yes", "nextSlug": "relationship-approach" },
         { "value": "No", "nextSlug": "relationship-approach" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "relationship-approach",
@@ -52,7 +55,8 @@
           "nextSlug": "partner-characteristic"
         }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "partner-characteristic",
@@ -64,7 +68,8 @@
         { "value": "Extrovert", "nextSlug": "partner-gender" },
         { "value": "A bit of both", "nextSlug": "partner-gender" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "partner-gender",
@@ -75,7 +80,8 @@
         { "value": "Male", "nextSlug": "partner-priority" },
         { "value": "Female", "nextSlug": "partner-priority" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "partner-priority",
@@ -89,7 +95,8 @@
         { "value": "Disagree", "nextSlug": "relationship-goal" },
         { "value": "Strongly disagree", "nextSlug": "relationship-goal" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "relationship-goal",
@@ -107,7 +114,8 @@
         },
         { "value": "I’m feeling a little anxious, honestly.", "nextSlug": "about-us" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "parent-single",
@@ -118,7 +126,8 @@
         { "value": "Yes", "nextSlug": "single-problem" },
         { "value": "No", "nextSlug": "single-problem" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "single-problem",
@@ -143,7 +152,8 @@
           "nextSlug": "trait-tent-to-overthink"
         }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "trait-tent-to-overthink",
@@ -151,18 +161,20 @@
       "description": "",
       "quotes": "",
       "options": [
-        { "value": "Yes", "nextSlug": "how-does-it-work" },
-        { "value": "No", "nextSlug": "how-does-it-work" }
+        { "value": "Yes", "nextSlug": "traits-most-important" },
+        { "value": "No", "nextSlug": "traits-emotional-control" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": "how-does-it-work"
     },
     {
       "slug": "how-does-it-work",
       "title": "So how does it work?",
       "description": "We analyze hundreds of data points to create your unique astrological blueprint. This is combined with AI to tailor-make your astrological insights, based on your answers. We’re going to change your relationship with astrology.",
       "quotes": "",
-      "options": [],
-      "type": "info"
+      "options": [{ "value": "Next", "nextSlug": "" }],
+      "type": { "name": "info", "theme": "dark" },
+      "nextPage": ""
     },
     {
       "slug": "traits-most-important",
@@ -175,7 +187,22 @@
         { "value": "Stability", "nextSlug": "about-us" },
         { "value": "Freedom", "nextSlug": "about-us" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
+    },
+    {
+      "slug": "traits-emotional-control",
+      "title": "Is emotional control tricky for you?",
+      "description": "",
+      "quotes": "",
+      "options": [
+        { "value": "Yes", "nextSlug": "about-us" },
+        { "value": "Sometimes", "nextSlug": "about-us" },
+        { "value": "Rarely", "nextSlug": "about-us" },
+        { "value": "Not at all", "nextSlug": "about-us" }
+      ],
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     },
     {
       "slug": "about-us",
@@ -196,11 +223,11 @@
         { "value": "Blog Post or Website Review", "nextSlug": "final" },
         { "value": "Podcast", "nextSlug": "final" },
         { "value": "Influencer", "nextSlug": "final" },
-        { "value": "YouTube", "nextSlug": "final" },
         { "value": "Pinterest", "nextSlug": "final" },
         { "value": "Other", "nextSlug": "final" }
       ],
-      "type": "quiz"
+      "type": { "name": "quiz", "theme": "light" },
+      "nextPage": ""
     }
   ]
 }

@@ -2,16 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.light {
   --primary: #543c97;
   --secondary: #eaeef7;
   --accent: #6a3aa2;
   --text-primary: #201f1f;
-  --text-secondary: #fbfbff;
+  --text-secondary: #201f1f;
+  --button-text: #201f1f;
   --button-border: #e0e0e0;
   --blockquote: #333333;
   --background: #ffffff;
-  --background-dark: 'linear-gradient(165.54deg, #141333 -33.39%, #202261 15.89%, #543C97 55.84%, #6939A2 74.96%)';
+  --foreground: #201f1f;
+  --custom-gradient: 'linear-gradient(165.54deg, #141333 -33.39%, #202261 15.89%, #543C97 55.84%, #6939A2 74.96%)';
+  --default-shadow: '2px 2px 6px 0px rgba(84, 60, 151, 0.251)';
+}
+
+.dark {
+  --primary: #543c97;
+  --secondary: #eaeef7;
+  --accent: #6a3aa2;
+  --text-primary: #ffffff;
+  --text-secondary: #fbfbff;
+  --button-text: #6a3aa2;
+  --button-border: #e0e0e0;
+  --blockquote: #ffffff;
+  --background: linear-gradient(
+    165.54deg,
+    #141333 -33.39%,
+    #202261 15.89%,
+    #543c97 55.84%,
+    #6939a2 74.96%
+  );
   --foreground: #201f1f;
   --custom-gradient: 'linear-gradient(165.54deg, #141333 -33.39%, #202261 15.89%, #543C97 55.84%, #6939A2 74.96%)';
   --default-shadow: '2px 2px 6px 0px rgba(84, 60, 151, 0.251)';
@@ -26,5 +47,11 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  .dark {
+    @apply bg-gray-800 text-white;
   }
 }

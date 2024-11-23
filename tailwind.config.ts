@@ -8,10 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      darkMode: 'class',
       colors: {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
         accent: 'var(--accent)',
+        buttonText: 'var(--button-text)',
         buttonDefault: 'var(--secondary)',
         buttonBorder: 'var(--button-border)',
         textPrimary: 'var(--text-primary)',

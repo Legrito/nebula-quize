@@ -14,6 +14,8 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = {
   key: 'root',
   storage,
+  whitelist: ['theme', 'quiz', 'nextSlug'],
+  debug: true,
 };
 
 const rootReducer = combineReducers({
@@ -30,6 +32,10 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
+});
+
+store.subscribe(() => {
+  console.log(store.getState());
 });
 
 // Infer the `RootState`,  `AppDispatch`, and `AppStore` types from the store itself

@@ -1,4 +1,4 @@
-import quizConfig from '../../../data/quiz.json';
+import quizConfig from '@/data/quiz.json';
 import clsx from 'clsx';
 import ThemeContainer from '@/components/ThemeContainer';
 import ContentBox from '@/components/ContentBox';

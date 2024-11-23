@@ -41,19 +41,19 @@ To get started with the Nebula Quiz project, follow these steps:
 
 2. Install dependencies:
 
-```bash
-pnpm install
-```
+   ```bash
+   pnpm install
+   ```
 
 3. Set up pre-commit:
 
-```bash
-pnpm husky init
+   ```bash
+   pnpm husky init
 
-pnpm run prepare
+   pnpm run prepare
 
-pnpm husky add .husky/pre-commit "npm run format:fix && npm run lint"
-```
+   pnpm husky add .husky/pre-commit "npm run format:fix && npm run lint"
+   ```
 
 ## Scripts
 

@@ -20,8 +20,8 @@ export default function ContentBox({ screen, slug }: Props) {
         )}
       >
         <DynamicTitle text={screen.title} />
-        {!!screen.description && <Text text={screen.description} />}
-        {!!screen.quotes && <Quote text={screen.quotes} />}
+        {!!screen.description && <Text>{screen.description}</Text>}
+        {!!screen.quotes && <Quote>{screen.quotes}</Quote>}
       </div>
       {screen.options.length > 0 && (
         <ul className="flex flex-col justify-center align-middle gap-[20px]">

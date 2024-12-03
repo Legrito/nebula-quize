@@ -1,7 +1,5 @@
-interface Props {
-  text: string;
-}
+import { PropsWithChildren } from 'react';
 
-export default function Title({ text }: Props) {
-  return <h1 className="text-2xl font-bold dark:text-white">{text}</h1>;
+export default function Title({ children }: PropsWithChildren) {
+  return <h1 className="text-2xl font-bold dark:text-white">{children}</h1>;
 }

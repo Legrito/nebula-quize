@@ -10,5 +10,5 @@ interface Props {
 export default function DynamicTitle({ text }: Props) {
   const dynamicText = useDynamicContent(text);
 
-  return <Title text={dynamicText} />;
+  return <Title>{dynamicText}</Title>;
 }
